@@ -26,9 +26,9 @@ const Prefooter: React.FC = () => {
             animate={{ x: [0, -1500] }}
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
-            {items.map((text) => (
+            {items.map((text, index) => (
               <div
-                key={text}
+                key={`${text}-${index}`} // Make the key unique by appending the index
                 className="inline-block px-6 py-4 bg-purple-500 bg-opacity-25 rounded-lg shadow text-gray-200 text-center text-md"
               >
                 {text}
