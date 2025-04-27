@@ -29,12 +29,23 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* 🔁 Video Background */}
-        <video id="background-video" autoPlay muted loop playsInline>
-          <source src="/videos/imagen-bh-dnx.mp4" type="video/mp4" />
+        <video
+          id="background-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          {/* Updated video path */}
+          <source
+            src="/Videos/imagen-bh-dnx.mp4 07-58-50-160.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
-
-        {/* Main Content */}
+        {/* Render children (main content of your site) */}
         {children}
       </body>
     </html>

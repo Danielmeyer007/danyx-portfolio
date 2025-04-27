@@ -1,4 +1,3 @@
-// components/Prefooter.tsx
 "use client";
 
 import React from "react";
@@ -18,18 +17,21 @@ const Prefooter: React.FC = () => {
 
   return (
     <section className="relative w-full bg-transparent py-8 overflow-hidden">
-      <div className="container mx-auto px-4">
+      {/* Background overlay to improve readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+
+      {/* Main content container */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="w-full overflow-hidden whitespace-nowrap">
           <motion.div
             className="flex gap-6 items-center"
-            // Ajusta el valor de x según la cantidad y ancho de los elementos
             animate={{ x: [0, -1500] }}
             transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
           >
             {items.map((text, index) => (
               <div
                 key={`${text}-${index}`} // Make the key unique by appending the index
-                className="inline-block px-6 py-4 bg-purple-500 bg-opacity-25 rounded-lg shadow text-gray-200 text-center text-md"
+                className="inline-block px-6 py-4 bg-purple-600 bg-opacity-40 rounded-lg shadow-xl text-gray-100 text-center text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:bg-purple-700"
               >
                 {text}
               </div>
