@@ -107,13 +107,9 @@ const Header: React.FC = () => {
             >
               Contact Us
             </Link>
-            <Link
-              href="/buy-dnx"
-              className="px-4 py-2 rounded-full bg-gradient-to-b from-[#0a0a0a] to-[#090909] text-white hover:text-yellow-400 transition"
-              onClick={toggleMenu}
-            >
-              Buy DNX
-            </Link>
+            <span className="px-4 py-2 rounded-full bg-gradient-to-b from-[#0a0a0a] to-[#090909] text-white">
+              Buy DNX Soon
+            </span>
           </div>
         </div>
       )}
